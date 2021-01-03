@@ -2,9 +2,9 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* button{
-    @apply transition p-2 rounded   text-white duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110
-} */
+button{
+    @apply transition p-2 rounded-xl   text-white duration-500 ease-in-out   transform hover:-translate-y-1 hover:scale-110
+}
 body {
     font-family: 'Source Sans Pro', sans-serif;
   }
@@ -213,4 +213,11 @@ nav{
 }
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.meal_plan_block {
+    background: #ffffff;
+}
+.bg-orange{
+    background: #f8bc32;
 }

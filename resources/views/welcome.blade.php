@@ -1,7 +1,8 @@
 @extends('layout.app')
 @section('title', 'Eduane')
 @section('maincontent')
-<div class="homepage" style="background:url('/svg/meal-background.svg')">
+<div class="homepage" >
+  <div class="nav_and_hero" style="background:url('/svg/meal-background.svg')">
 <nav class="py-2">
   <div  class="logo  items-center justify-between">
     <a class="toggleColour  no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
@@ -44,7 +45,7 @@
     </div>
     <!--Right Col-->
     <div class="w-full md:w-3/5 py-6  text-center">
-      <img class="w-full md:w-4/5 z-50 mx-auto" style="height:350px" src="svg/hero-svg.svg" />
+      <img class="w-full md:w-4/5 z-50 mx-auto" style="height:300px" src="svg/hero-svg.svg" />
     </div>
   </div>
 </div>
@@ -68,6 +69,90 @@
     </g>
   </svg>
 </div>
+</div>
+
+<section>
+  <div class="flex flex-wrap my-6 justify-center container">
+    <div class="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
+      <div class="flex mr-3 bg-gray-100 rounded-md shadow-md py-2">
+        <div class="my-auto mx-2 mr-3">
+        <img class="h-32 sm:h-32 w-auto" src="img/get-lean.png" alt=" get-lean">
+        </div>
+        <div class="px-3 ml-2 pt-3 md:ml-4">
+          <h2 class="text-xl lg:text-2xl font-semibold">GET LEAN</h2>
+          <p>For those looking to get lean</p>
+          <button class="bg-orange text-black rounded-3xl py-1 px-4 mt-3">Select</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
+      <div class="flex mr-3 bg-gray-100 rounded-md shadow-md py-2">
+        <div class="my-auto mx-2 mr-3">
+        <img class="h-32 sm:h-32 w-auto" src="img/get-lean.png" alt=" get-lean">
+        </div>
+        <div class="px-3 ml-2 pt-3 md:ml-4">
+          <h2 class="text-xl lg:text-2xl font-semibold">BALANCED DIET</h2>
+          <p>For those looking to get lean</p>
+          <button class="bg-orange text-black rounded-3xl py-1 px-4 mt-3">Select</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
+      <div class="flex mr-3 bg-gray-100 rounded-md shadow-md py-2">
+        <div class="my-auto mx-2 mr-3">
+        <img class="h-32 sm:h-32 w-38" src="img/get-lean.png" alt=" get-lean">
+        </div>
+        <div class="px-3 ml-2 pt-3 md:ml-4">
+          <h2 class="text-xl lg:text-2xl font-semibold">BUILD MUSCLE</h2>
+          <p>For those looking to get lean</p>
+          <button class="bg-orange text-black rounded-3xl py-1 px-4 mt-3">Select </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="how_it_works container my-3 mt-4">
+<h1 class="text-center text-2xl font-semibold">HOW IT WORKS</h1>
+
+<!-- Container -->
+<div class="flex flex-wrap mt-2 mx-2">
+    <!-- Item -->
+    <div class="w-full md:w-1/2 lg:w-1/4 px-2 my-2">
+        <div class="text-center p-4">
+          <img class="h-20 sm:h-20 w-20 mx-auto" src="img/lightbulb.png" alt="">
+          <h2 class="my-3">CHOOSE YOUR HEALTH GOAL</h2>
+        </div>
+    </div>
+    <!-- Item -->
+    <div class="w-full md:w-1/2 lg:w-1/4 px-2 my-2">
+        <div class="text-center p-4">
+          <img class="h-20 sm:h-20 w-20 mx-auto" src="img/pencil.png" alt="">
+          <h2 class="my-3">SAVE YOUR GOAL AND KEEP TRACK OF YOUR PROGRESS</h2>
+        </div>
+    </div>
+    <!-- Item -->
+    <div class="w-full md:w-1/2 lg:w-1/4 px-2 my-2">
+        <div class="text-center p-4">
+          <img class="h-20 sm:h-20 w-20 mx-auto" src="img/truck.png" alt="">
+          <h2 class="my-3">RECEIVE DELICIOUS FOODS AND KEEP TRACK OF PROGRESS</h2>
+        </div>
+    </div>
+    <!-- Item -->
+    <div class="w-full md:w-1/2 lg:w-1/4 px-2 my-2">
+        <div class="text-center p-4">
+          <img class="h-20 sm:h-20 w-20 mx-auto" src="img/dishes.png" alt="">
+          <h2 class="my-3">STAY HEALTHY THROUGH OURCALORIE CONTROLLED MEALS</h2>
+        </div>
+    </div>
+
+    
+</div>
+</section>
+
 
   
 </div>

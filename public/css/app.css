@@ -548,6 +548,10 @@ video {
 
 .container {
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 @media (min-width: 640px) {
@@ -31168,9 +31172,34 @@ video {
           animation: bounce 1s infinite;
 }
 
-/* button{
-    @apply transition p-2 rounded   text-white duration-500 ease-in-out bg-blue-600 hover:bg-red-600 transform hover:-translate-y-1 hover:scale-110
-} */
+button{
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+
+button:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  --tw-translate-y: -0.25rem;
+}
+
+button {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -31419,9 +31448,21 @@ nav{
   transform: rotate(45deg) translate(-5px,-6px);
 }
 
+.meal_plan_block {
+  background: #ffffff;
+}
+
+.bg-orange{
+  background: #f8bc32;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 
   @media (min-width: 640px) {
@@ -61967,6 +62008,10 @@ nav{
 @media (min-width: 768px) {
   .md\:container {
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 
   @media (min-width: 640px) {
@@ -92512,6 +92557,10 @@ nav{
 @media (min-width: 1024px) {
   .lg\:container {
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 
   @media (min-width: 640px) {
@@ -123057,6 +123106,10 @@ nav{
 @media (min-width: 1280px) {
   .xl\:container {
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 
   @media (min-width: 640px) {
@@ -153602,6 +153655,10 @@ nav{
 @media (min-width: 1536px) {
   .\32xl\:container {
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 
   @media (min-width: 640px) {

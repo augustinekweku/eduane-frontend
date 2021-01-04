@@ -145,7 +145,7 @@
     <div class="w-full md:w-1/2 lg:w-1/4 px-2 my-2">
         <div class="text-center p-4">
           <img class="h-20 sm:h-20 w-20 mx-auto" src="img/dishes.png" alt="">
-          <h2 class="my-3">STAY HEALTHY THROUGH OURCALORIE CONTROLLED MEALS</h2>
+          <h2 class="my-3">STAY HEALTHY THROUGH OUR CALORIE CONTROLLED MEALS</h2>
         </div>
     </div>
 

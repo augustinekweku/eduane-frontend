@@ -1,3 +1,4 @@
+<script src="{{mix('/js/app.js')}}"></script>
 <script>
   const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");

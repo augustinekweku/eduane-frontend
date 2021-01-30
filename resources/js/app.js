@@ -1,11 +1,14 @@
 require('./bootstrap');
+
 window.Vue = require('vue');
 
-import Carousel3d from 'vue-carousel-3d';
+window.$ = window.jQuery = require('jquery')
+    
 
-Vue.use(Carousel3d);
 
 Vue.component('search', require('./components/search.vue').default)
+Vue.component('testimonial-slider', require('./components/testimonial-slider.vue').default)
+Vue.component('faqs', require('./components/faqs.vue').default)
 
 const app = new Vue({
     el: '#app'

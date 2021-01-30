@@ -22,7 +22,10 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "jquery": "^3.5.1",
+        "owl.carousel": "^2.3.4",
         "vue": "^2.6.12",
-        "vue-carousel-3d": "^1.0.1"
+        "vue-faq-accordion": "^1.6.2",
+        "vue-owl-carousel": "^2.0.3"
     }
 }

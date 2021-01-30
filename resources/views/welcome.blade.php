@@ -3,7 +3,7 @@
 @section('maincontent')
 <div class="homepage" >
   <div class="nav_and_hero" style="background:url('/svg/meal-background.svg')">
-<nav class="py-2">
+<nav class=" nav-bar py-2">
   <div  class="logo  items-center justify-between">
     <a class="toggleColour  no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
     Eduane
@@ -69,11 +69,12 @@
     </g>
   </svg>
 </div>
+
 </div>
 
-<section>
+<section class="my-12">
   <div class="flex flex-wrap my-6 justify-center container">
-    <div class="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
+    <div class="w-full md:w-1/2 lg:w-1/3 px-2 my-4">
       <div class="flex mr-3 bg-gray-100 rounded-md shadow-md py-2">
         <div class="my-auto mx-2 mr-3">
         <img class="h-32 sm:h-32 w-auto" src="img/get-lean.png" alt=" get-lean">
@@ -86,7 +87,7 @@
       </div>
     </div>
 
-    <div class="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
+    <div class="w-full md:w-1/2 lg:w-1/3 px-2 my-4">
       <div class="flex mr-3 bg-gray-100 rounded-md shadow-md py-2">
         <div class="my-auto mx-2 mr-3">
         <img class="h-32 sm:h-32 w-auto" src="img/get-lean.png" alt=" get-lean">
@@ -99,7 +100,7 @@
       </div>
     </div>
 
-    <div class="w-full md:w-1/2 lg:w-1/3 px-2 my-2">
+    <div class="w-full md:w-1/2 lg:w-1/3 px-2 my-4">
       <div class="flex mr-3 bg-gray-100 rounded-md shadow-md py-2">
         <div class="my-auto mx-2 mr-3">
         <img class="h-32 sm:h-32 w-38" src="img/get-lean.png" alt=" get-lean">
@@ -115,7 +116,7 @@
   </div>
 </section>
 
-<section class="how_it_works container my-3 mt-4">
+<section class="how_it_works container my-16 mt-4">
 <h1 class="text-center text-2xl font-semibold">HOW IT WORKS</h1>
 
 <!-- Container -->
@@ -153,27 +154,23 @@
 </div>
 </section>
 
-<section class="testimonials">
-<div class="carousel_test">
-  <carousel-3d>
-    <slide :index="0">
-      Slide 1 Content
-    </slide>
-    <slide :index="1">
-      Slide 2 Content
-    </slide>
-    <slide :index="2">
-      Slide 3 Content
-    </slide>
-    <slide :index="3">
-      Slide 4 Content
-    </slide>
-  </carousel-3d>
 
-  <search></search>
+<section class="testimonials py-6">
+
+  <h1 class="testimonial_header text-center py-3">What our customers say</h1>
+<div class="carousel_test m-3">
+<testimonial-slider></testimonial-slider>
 </div>
 </section>
   
+
+<section class="faqs  mt-24">
+  <h1 class="text-center my-2">FAQs</h1>
+  <div class="">
+  <faqs class="mx-auto container"></faqs>
+  </div>
+
+</section>
 
 
 

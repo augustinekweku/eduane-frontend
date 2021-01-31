@@ -22,8 +22,10 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "animate.css": "^4.1.1",
         "jquery": "^3.5.1",
         "owl.carousel": "^2.3.4",
+        "sweetalert2": "^10.14.0",
         "vue": "^2.6.12",
         "vue-faq-accordion": "^1.6.2",
         "vue-owl-carousel": "^2.0.3"

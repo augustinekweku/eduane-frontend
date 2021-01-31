@@ -1,6 +1,8 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import "tailwindcss/screens";
+
 
 button{
     @apply transition p-2 rounded-xl   text-white duration-500 ease-in-out   transform hover:-translate-y-1 hover:scale-110
@@ -23,6 +25,12 @@ h1{
 } */
 body{
     overflow-x: hidden;
+}
+.bg-orange-100{
+    background: #f7a11b;
+}
+.text-orange{
+    color: #f7a11b;
 }
 .nav-bar{
     width: 100vw;
@@ -48,9 +56,6 @@ body{
 
 .blackColor{
     background: black !important;
-}
-.text-orange{
-    color: #f8bc32 ;
 }
 
 /*Styling logo*/

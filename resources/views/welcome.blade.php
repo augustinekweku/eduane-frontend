@@ -22,8 +22,8 @@
       <li><a href="#">Services</a></li>
       <li><a href="#">Contact Us</a></li>
 
-      <li><button class="login-button  mx-1 bg-white text-gray-800 font-bold rounded-full py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" href="#">Login</button></li>
-      <li><button class="join-button mx-1 bg-white text-gray-800 font-bold rounded-full py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out" href="#">Join</button></li>
+      <li><button class="login-button  mx-1 bg-white text-gray-800 font-bold rounded-full py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Login</button></li>
+      <li><a href="/register" class="join-button mx-1 bg-white text-gray-800 font-bold rounded-full py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Join</a></li>
     </div>
   </ul>
 </nav>
@@ -44,8 +44,8 @@
       </button>
     </div>
     <!--Right Col-->
-    <div class="w-full md:w-3/5 py-6  text-center">
-      <img class="w-full md:w-4/5 z-50 mx-auto" style="height:300px" src="svg/hero-svg.svg" />
+    <div class="w-full md:w-3/5 py-6 text-center">
+      <img class="w-full md:w-4/5 z-50 mx-auto " style="height:300px" src="svg/hero-svg.svg" />
     </div>
   </div>
 </div>
@@ -175,4 +175,6 @@
 
 
 </div>
+    @include('partials.footer')
+
 @endsection

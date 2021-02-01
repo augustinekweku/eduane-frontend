@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MealController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -16,10 +17,12 @@ use App\Http\Controllers\UserController;
 
 Route::prefix('app')->group(function(){
 Route::post('/register_user',[UserController::class, 'registerUser']);
+Route::post('/login_user',[UserController::class, 'loginUser']);
 
 });
 Route::get('/register',[UserController::class, 'index']);
-Route::get('/login',[UserController::class, 'login']);
+Route::get('/login',[UserController::class, 'loginIndex']);
+Route::get('/mealplans',[MealController::class, 'index']);
 
 
 Route::get('/', function () {

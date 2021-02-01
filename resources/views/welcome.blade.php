@@ -3,31 +3,11 @@
 @section('maincontent')
 <div class="homepage" >
   <div class="nav_and_hero" style="background:url('/svg/meal-background.svg')">
-<nav class=" nav-bar py-2">
-  <div  class="logo  items-center justify-between">
-    <a class="toggleColour  no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-    Eduane
-    </a>
-  </div>
-  <div class="hamburger">
-      <div class="line line1"></div>
-      <div class="line line2"></div>
-      <div class="line line3"></div>
-  </div>
-  <ul class="nav-links">
-    <div class="inside-links flex items-center ml-auto ">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Solutions</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact Us</a></li>
-
-      <li><button class="login-button  mx-1 bg-white text-gray-800 font-bold rounded-full py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Login</button></li>
-      <li><a href="/register" class="join-button mx-1 bg-white text-gray-800 font-bold rounded-full py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">Join</a></li>
-    </div>
-  </ul>
-</nav>
-
+    @if (Auth::check())
+    <navbar :user="{{Auth::user()}}"></navbar>        
+    @else
+    <navbar></navbar>             
+    @endif
 <!--Hero-->
 <div class="pt-8">
   <div class="container mt-10 px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">

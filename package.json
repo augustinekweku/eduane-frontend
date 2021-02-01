@@ -28,6 +28,7 @@
         "sweetalert2": "^10.14.0",
         "vue": "^2.6.12",
         "vue-faq-accordion": "^1.6.2",
-        "vue-owl-carousel": "^2.0.3"
+        "vue-owl-carousel": "^2.0.3",
+        "vuex": "^3.6.2"
     }
 }

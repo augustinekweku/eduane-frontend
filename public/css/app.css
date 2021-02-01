@@ -184031,7 +184031,7 @@ body{
   margin: 0 0.7vw;
 }
 
-.nav-links li a:hover {
+.main-nav-links li a:hover {
   color: white;
 }
 
@@ -184039,7 +184039,7 @@ body{
   position: relative;
 }
 
-.nav-links li a::before {
+.nav-links li  .main-links::before {
   content: "";
   display: block;
   height: 3px;
@@ -184050,7 +184050,7 @@ body{
   margin: 0 0 0 10%;
 }
 
-.nav-links li a:hover::before{
+.nav-links li  .main-links:hover::before{
   width: 80%;
 }
 
@@ -184103,7 +184103,7 @@ body{
 /*Stying for small screens*/
 
 @media screen and (max-width: 800px){
-  nav{
+  .nav{
     position: fixed;
     z-index: 3;
     padding-top: 0;
@@ -184131,8 +184131,8 @@ body{
     text-align: center;
   }
 
-  .login-button{
-    margin-bottom: 15px;
+  a .login-button{
+    margin-bottom: 15px !important;
   }
 
   .nav-links{
@@ -184465,3 +184465,144 @@ footer{
 }
 
 /* END OF FOOTER STYLES  */
+
+/* VUE RESPONSIVE NAVBAR */
+
+.responsive-nav {
+  height: 60px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header {
+  padding-left: 10px;
+}
+
+.responsive-nav h2 {
+  width: auto;
+  margin-top: 15px;
+  padding-left: 40px;
+  margin-left: 10px;
+  font-size: 28px;
+  float: left;
+}
+
+.nav-icon {
+  display: none;
+  height: 60px;
+  width: 86px;
+  position: relative;
+  margin: 0px 5px;
+  float: right;
+}
+
+.nav-icon div {
+  height: 6px;
+  width: 51px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+.nav-icon div::before, .nav-icon div::after {
+  content: "";
+  height: 6px;
+  width: 100%;
+  position: absolute;
+  background: inherit;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  border-radius: 5px;
+}
+
+.nav-icon div::before {
+  top: -14px;
+}
+
+.nav-icon div::after {
+  top: 14px;
+}
+
+.left-arrow::before, .left-arrow::after {
+  transform-origin: top left;
+}
+
+.left-arrow.active .span::before {
+  width: 50%;
+  top: 0;
+  transform: translateX(-5px) translateY(-8px) rotate(-45deg);
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.left-arrow.active .span::after {
+  width: 50%;
+  top: 0;
+  transform: translateX(-5px) translateY(8px) rotate(45deg);
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.left-arrow.active .span {
+  transform: translateX(0px);
+}
+
+.responsive-nav ul {
+  top: 0;
+  right: 20px;
+  list-style-type: none;
+  border: none;
+}
+
+.responsive-nav ul li {
+  display: block;
+  float: right;
+  font-size: 24px;
+}
+
+.responsive-nav ul li div {
+  width: 100%;
+  padding-bottom: 10px;
+  left: -40px;
+  padding-left: 40px;
+  position: relative;
+}
+
+@media only screen and (max-width : 830px) {
+  .nav-icon {
+    display: block;
+  }
+
+  .responsive-nav ul {
+    background: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    left: -100%;
+    position: absolute;
+    top: 43px;
+    height: 100vh;
+    transition: left 0.5s;
+    -webkit-transition: left 0.5s;
+  }
+
+  .responsive-nav ul li {
+    float: none;
+  }
+}
+
+.side-nav-link {
+  padding-top: 20px;
+}
+
+/* END OF VUE RESPONSIVE NAVBAR */

@@ -7,6 +7,8 @@ window.$ = window.jQuery = require('jquery')
 import animateCss from 'animate.css';
 Vue.use(animateCss);
 
+import store from './store'
+
 import Swal from 'sweetalert2';
 window.Swal = Swal;
 
@@ -31,8 +33,10 @@ Vue.component('register', require('./components/register.vue').default)
 Vue.component('search', require('./components/search.vue').default)
 Vue.component('testimonial-slider', require('./components/testimonial-slider.vue').default)
 Vue.component('faqs', require('./components/faqs.vue').default)
+Vue.component('navbar', require('./components/navbar.vue').default)
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    store
 
 })

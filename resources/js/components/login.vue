@@ -94,10 +94,12 @@ export default {
             if (this.data.password.trim()=='') return this.showError('Password is required');
             
 			const res = await this.callApi('post', 'app/login_user', this.data)
-			if (res.status === 201) {
+			if (res.status === 200) {
 				this.data.email = ''
                 this.data.password = ''
                 this.successMsg('Login Successful')
+                console.log(res.data)
+                window.location= '/';
                 
 			}else {
 				if (res.status===422) {

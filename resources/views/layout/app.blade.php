@@ -8,59 +8,104 @@
     @include('partials.header')
 </head>
 <body>
+
     <div id="app">
-        @include('partials.nav')
         @yield('maincontent')
-        
     </div>
+
     <script src="{{mix('/js/app.js')}}"></script>
 </body>
 
-<script>
-    const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
-  const links = document.querySelectorAll(".nav-links li");
-  const scrollNav = document.querySelector("nav")
-  const scrollHamburger = document.querySelectorAll(".line")
-  console.log(scrollHamburger)
-  hamburger.addEventListener('click', ()=>{
-     //Animate Links
-      navLinks.classList.toggle("open");
-      links.forEach(link => {
-          link.classList.toggle("fade");
-      });
-      //Hamburger Animation
-      hamburger.classList.toggle("toggle");
-     // for (let i = 0; i < scrollHamburger.length; i++) {
-       // scrollHamburger[i].classList.toggle("blackColor")  
-  //}
-  
-      scrollNav.classList.toggle("nav_no_padding");
-  });
-  
-  
-  document.addEventListener('scroll', ()=>{
+  <script>
+    // NAVIGATION LOGO SCROLL TOP
+$('.logo').on('click', function(e) {
+  e.preventDefault();
+  $('.nav-toggle').removeClass('open');
+  $('.menu-left').removeClass('collapse');
+  $('html, body').animate({
+    scrollTop: 0
+  }, 750, 'easeInOutQuad')
+});
+// LINKS TO ANCHORS
+$('a[href^="#"]').on('click', function(event) {
+
+  var $target = $(this.getAttribute('href'));
+
+  if($target.length) {
+    event.preventDefault();
+    $('html, body').stop().animate({
+      scrollTop: $target.offset().top
+    }, 750, 'easeInOutQuad');
+  }
+});
+
+// TOGGLE HAMBURGER & COLLAPSE NAV
+$('.nav-toggle').on('click', function() {
+  $(this).toggleClass('open');
+  $('.menu-left').toggleClass('collapse');
+});
+// REMOVE X & COLLAPSE NAV ON ON CLICK
+$('.menu-left a').on('click', function() {
+  $('.nav-toggle').removeClass('open');
+  $('.menu-left').removeClass('collapse');
+});
+
+$('.nav-toggle').on('click', function(){
+  console.log('hello')
+  $('header').addClass('header-white');
+
+})
+
+// SHOW/HIDE NAV
+
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
+var scrollPos;
+$(window).scroll(function(event){
+    didScroll = true;
     scrollPos = window.scrollY
-    //console.log(scrollPos)
     if(scrollPos > 10){
-      scrollNav.classList.add("nav-scroll")
-      scrollNav.classList.remove("nav")
-      for (let i = 0; i < scrollHamburger.length; i++) {
-            scrollHamburger[i].classList.add("blackColor")
-            hamburger.classList.add("hamburger_black") 
-      }
-  
-  
+      $('header').addClass('header-white');
     }else{
-      scrollNav.classList.remove("nav-scroll")
-      scrollNav.classList.add("nav")
-      for (let i = 0; i < scrollHamburger.length; i++) {
-            //scrollHamburger[i].classList.remove("blackColor")
-            hamburger.classList.remove("hamburger_black") 
-     
-  
-  }   
+      $('header').removeClass('header-white');
+      
+    } 
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
     }
-  })
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        //commented this to my own editing
+        //$('header').removeClass('show-nav').addClass('hide-nav');
+        $('.nav-toggle').removeClass('open');
+        $('.menu-left').removeClass('collapse');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            //commented this to my own editing
+            //$('header').removeClass('hide-nav').addClass('show-nav');
+        } 
+    }
+
+    lastScrollTop = st;
+}
   </script>
 </html>

@@ -54,44 +54,25 @@
 
 <section class="my-12">
   <div class="flex flex-wrap my-6 justify-center container">
+    @if (count($mealplans)> 0)
+    @foreach ($mealplans as $mealplan)
     <div class="w-full md:w-1/2 lg:w-1/3 px-2 my-4">
       <div class="flex mr-3 bg-gray-100 rounded-md shadow-md py-2">
         <div class="my-auto mx-2 mr-3">
-        <img class="h-32 sm:h-32 w-auto" src="img/get-lean.png" alt=" get-lean">
+        <img class="h-32 sm:h-32 w-auto rounded-full" src="{{$mealplan->featuredImage}}" alt=" get-lean">
         </div>
         <div class="px-3 ml-2 pt-3 md:ml-4">
-          <h2 class="text-xl lg:text-2xl font-semibold">GET LEAN</h2>
-          <p>For those looking to get lean</p>
+          <h2 class="text-xl lg:text-2xl font-semibold">{{$mealplan->title}}</h2>
+          <p>{{$mealplan->description}}</p>
           <button class="bg-orange text-black rounded-3xl py-1 px-4 mt-3">Select</button>
         </div>
       </div>
-    </div>
+    </div>     
+    @endforeach
+        
+    @endif
 
-    <div class="w-full md:w-1/2 lg:w-1/3 px-2 my-4">
-      <div class="flex mr-3 bg-gray-100 rounded-md shadow-md py-2">
-        <div class="my-auto mx-2 mr-3">
-        <img class="h-32 sm:h-32 w-auto" src="img/get-lean.png" alt=" get-lean">
-        </div>
-        <div class="px-3 ml-2 pt-3 md:ml-4">
-          <h2 class="text-xl lg:text-2xl font-semibold">BALANCED DIET</h2>
-          <p>For those looking to get lean</p>
-          <button class="bg-orange text-black rounded-3xl py-1 px-4 mt-3">Select</button>
-        </div>
-      </div>
-    </div>
 
-    <div class="w-full md:w-1/2 lg:w-1/3 px-2 my-4">
-      <div class="flex mr-3 bg-gray-100 rounded-md shadow-md py-2">
-        <div class="my-auto mx-2 mr-3">
-        <img class="h-32 sm:h-32 w-38" src="img/get-lean.png" alt=" get-lean">
-        </div>
-        <div class="px-3 ml-2 pt-3 md:ml-4">
-          <h2 class="text-xl lg:text-2xl font-semibold">BUILD MUSCLE</h2>
-          <p>For those looking to get lean</p>
-          <button class="bg-orange text-black rounded-3xl py-1 px-4 mt-3">Select </button>
-        </div>
-      </div>
-    </div>
 
   </div>
 </section>
@@ -138,9 +119,9 @@
 <section class="testimonials py-6">
 
   <h1 class="testimonial_header text-center py-3">What our customers say</h1>
-<div class="carousel_test m-3">
-<testimonial-slider></testimonial-slider>
-</div>
+  <div class="carousel_test m-3">
+  <testimonial-slider></testimonial-slider>
+  </div>
 </section>
   
 

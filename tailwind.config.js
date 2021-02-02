@@ -7,7 +7,7 @@ module.exports = {
       padding: "1.5rem",
     },
     screens: {
-      'sm': '640px',
+      'sm': '425px',
       // => @media (min-width: 640px) { ... }
 
       'md': '768px',

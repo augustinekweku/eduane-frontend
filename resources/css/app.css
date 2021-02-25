@@ -4,7 +4,7 @@
 @import "tailwindcss/screens";
 
 
-button{
+button, .button{
     @apply transition p-2 rounded-xl   text-white duration-500 ease-in-out   transform hover:-translate-y-1 hover:scale-110
 }
 body {
@@ -623,3 +623,4 @@ footer{
     padding-top: 20px;
   }
 /* END OF VUE RESPONSIVE NAVBAR */
+

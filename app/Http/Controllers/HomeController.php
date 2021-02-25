@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index() {
-        $mealplans = Mealplan::select('title', 'description', 'featuredImage')->get();
-        return view('welcome')->with(['mealplans' => $mealplans]);;
+        $mealplans = Mealplan::select('id', 'title', 'description', 'featuredImage')->get();
+        return view('welcome')->with(['mealplans' => $mealplans]);
     }
 }

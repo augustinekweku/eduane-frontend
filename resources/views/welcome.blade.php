@@ -13,18 +13,18 @@
   <div class="container mt-10 px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
     <!--Left Col-->
     <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-      <h1 class="my-4 text-5xl font-bold leading-tight">
+      <h1 class="animate__animated animate__slideInRight my-4 text-5xl font-bold leading-tight">
         Meal Plans
       </h1>
-      <p class="leading-normal text-2xl mb-8">
+      <p class="leading-normal text-2xl mb-8 animate__animated animate__slideInLeft">
         Calorie controlled meal delivered to you to stay healthy.
       </p>
-      <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+      <button class="animate__animated animate__zoomIn mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
         Subscribe
       </button>
     </div>
     <!--Right Col-->
-    <div class="w-full md:w-3/5 py-6 text-center">
+    <div class="w-full md:w-3/5 py-6 chef_svg text-center animate__animated animate__slideInRight animate__delay-1s">
       <img class="w-full md:w-4/5 z-50 mx-auto " style="height:300px" src="svg/hero-svg.svg" />
     </div>
   </div>
@@ -52,19 +52,19 @@
 
 </div>
 
-<section class="my-12">
-  <div class="flex flex-wrap my-6 justify-center container">
+<section class="my-12 mx-2 lg:mx-4 xl:mx-8">
+  <div class="flex flex-wrap my-6 justify-center">
     @if (count($mealplans)> 0)
     @foreach ($mealplans as $mealplan)
-    <div class="w-full md:w-1/2 lg:w-1/3 px-2 my-4">
-      <div class="flex mr-3 bg-gray-100 rounded-md shadow-md py-2">
-        <div class="my-auto mx-2 mr-3">
-        <img class="h-32 sm:h-32 w-auto rounded-full" src="{{$mealplan->featuredImage}}" alt=" get-lean">
+    <div class="w-full md:w-1/2 lg:w-1/3 px-3 my-2 animate__animated animate__zoomIn">
+      <div class="flex bg-gray-100 justify-center items-center rounded-md shadow-md py-1">
+        <div class=" w-2/5 my-auto mx-1">
+        <img class=" p-0 xs:p-0 sm:p-0 md:p-0 lg:p-0 xl:p-2 2xl:p-4 h-20 xs:h-24 sm:h-24 md:h-24 lg:h-22 xl:h-32 rounded-full" src="{{$mealplan->featuredImage}}" alt=" get-lean">
         </div>
         <div class="px-3 ml-2 pt-3 md:ml-4">
-          <h2 class="text-xl lg:text-2xl font-semibold">{{$mealplan->title}}</h2>
-          <p>{{$mealplan->description}}</p>
-          <button class="bg-orange text-black rounded-3xl py-1 px-4 mt-3">Select</button>
+          <h2 class="text-base xs:text-lg sm:text-xl lg:text-2xl font-semibold">{{$mealplan->title}}</h2>
+          <p class="text-xs xs:text-base">{{$mealplan->description}}</p>
+          <a href="mealplans/{{$mealplan->id}}" class="bg-orange text-black rounded-3xl py-1 px-4 mt-3">Select</a>
         </div>
       </div>
     </div>     

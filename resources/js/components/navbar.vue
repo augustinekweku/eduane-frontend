@@ -2,7 +2,7 @@
     <div>
         <header>
             <div class="container">
-                <nav id="navigation">
+                <nav id="navigation" class="animate__animated animate__fadeIn">
                     <a class="logo text-bold" href="/">Eduane</a>
                     <a aria-label="mobile menu" class="nav-toggle">
                         <span></span>

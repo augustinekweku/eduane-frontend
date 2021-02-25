@@ -37121,39 +37121,46 @@ var render = function() {
   return _c("div", [
     _c("header", [
       _c("div", { staticClass: "container" }, [
-        _c("nav", { attrs: { id: "navigation" } }, [
-          _c("a", { staticClass: "logo text-bold", attrs: { href: "/" } }, [
-            _vm._v("Eduane")
-          ]),
-          _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _c("ul", { staticClass: "menu-left" }, [
-            _vm._m(1),
+        _c(
+          "nav",
+          {
+            staticClass: "animate__animated animate__fadeIn",
+            attrs: { id: "navigation" }
+          },
+          [
+            _c("a", { staticClass: "logo text-bold", attrs: { href: "/" } }, [
+              _vm._v("Eduane")
+            ]),
             _vm._v(" "),
-            _vm._m(2),
+            _vm._m(0),
             _vm._v(" "),
-            _vm._m(3),
-            _vm._v(" "),
-            _vm._m(4),
-            _vm._v(" "),
-            _vm._m(5),
-            _vm._v(" "),
-            _vm.$store.state.user
-              ? _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "logout-button   mx-1 bg-white text-gray-800 font-bold rounded-full py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out",
-                      attrs: { href: "/logout" }
-                    },
-                    [_vm._v("Logout")]
-                  )
-                ])
-              : _c("span", [_vm._m(6), _vm._v(" "), _vm._m(7)])
-          ])
-        ])
+            _c("ul", { staticClass: "menu-left" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2),
+              _vm._v(" "),
+              _vm._m(3),
+              _vm._v(" "),
+              _vm._m(4),
+              _vm._v(" "),
+              _vm._m(5),
+              _vm._v(" "),
+              _vm.$store.state.user
+                ? _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "logout-button   mx-1 bg-white text-gray-800 font-bold rounded-full py-2 px-4 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out",
+                        attrs: { href: "/logout" }
+                      },
+                      [_vm._v("Logout")]
+                    )
+                  ])
+                : _c("span", [_vm._m(6), _vm._v(" "), _vm._m(7)])
+            ])
+          ]
+        )
       ])
     ])
   ])

@@ -50,11 +50,16 @@ $('.menu-left a').on('click', function() {
   $('.menu-left').removeClass('collapse');
 });
 
+var isNavClicked= false
 $('.nav-toggle').on('click', function(){
   console.log('hello')
   $('header').addClass('header-white');
+  $('header').addClass('header-white');
+  $('header').toggleClass('animate__animated').toggleClass('animate__slideInDown');
+});
 
-})
+
+
 
 // SHOW/HIDE NAV
 

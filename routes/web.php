@@ -25,7 +25,7 @@ Route::post('/login_user',[UserController::class, 'loginUser']);
 //view routes
 Route::get('/register',[UserController::class, 'index']);
 Route::get('/login',[UserController::class, 'loginIndex']);
-Route::get('/mealplans',[MealController::class, 'index']);
+Route::get('/mealplans/{id}',[MealController::class, 'index']);
 Route::get('/logout',[UserController::class, 'logout']);
 Route::get('/',[HomeController::class, 'index']);
 
